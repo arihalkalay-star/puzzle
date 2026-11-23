@@ -172,12 +172,21 @@ footer img{height:28px;width:auto}
   .sticky.on{transform:none}
   .sticky .btn{display:block;text-align:center}
 }
-.cd{margin:18px 0 6px;padding:14px 16px;border:1px solid var(--gold);border-radius:12px;background:#FFFBF4;max-width:360px}
-.cd-t{font-size:15px;font-weight:600;color:var(--red);margin:0 0 10px}
-.cd-n{display:flex;gap:10px;direction:rtl}
-.cd-n span{flex:1;text-align:center;font-size:12px;color:#6b5a4a}
-.cd-n b{display:block;font-size:24px;font-weight:700;color:var(--red);line-height:1.2;font-variant-numeric:tabular-nums}
-.cd.ended .cd-n{display:none}
+.cd{margin:20px 0 8px;padding:20px 24px 18px;border-radius:14px;background:var(--red);color:#F6EADB;max-width:380px;text-align:center;box-shadow:0 10px 28px rgba(90,5,7,.22);position:relative}
+.cd:before{content:"";position:absolute;inset:5px;border:1px solid rgba(221,184,105,.45);border-radius:10px;pointer-events:none}
+.cd-t{font-size:15px;font-weight:600;color:#F6EADB;margin:0 0 2px;line-height:1.4}
+.cd-date{display:block;font-family:var(--serif);font-size:24px;font-weight:700;color:var(--gold-l);line-height:1.3;margin:0 0 12px;letter-spacing:.5px}
+.cd-n{display:flex;justify-content:center;align-items:flex-start;gap:6px;direction:rtl}
+.cd-n span{flex:1 1 0;min-width:0;max-width:66px;display:flex;flex-direction:column;align-items:center;font-size:12px;color:rgba(246,234,219,.85);line-height:1.3}
+.cd-n b{display:block;width:100%;padding:8px 0 6px;margin-bottom:6px;background:#FFFBF4;border-radius:8px;border-bottom:3px solid var(--gold);font-size:28px;font-weight:700;color:var(--red);line-height:1.1;font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+.cd-n i{font-style:normal;flex:0 0 auto;font-size:22px;font-weight:700;color:var(--gold-l);line-height:46px}
+.cd.ended .cd-n,.cd.ended .cd-date{display:none}
+.cd.ended .cd-t{margin:0}
+.hcd{margin:16px 0 0;font-size:14px;color:rgba(246,234,219,.78);display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.hcd b{font-weight:600;color:var(--gold-l);font-variant-numeric:tabular-nums;font-feature-settings:"tnum";letter-spacing:.3px}
+.hcd b bdi{direction:ltr;unicode-bidi:isolate}
+.hcd.ended b{display:none}
+@media (max-width:400px){.cd{max-width:none;padding:18px 20px 16px}.cd-n b{font-size:24px}}
 .sec.gets-sec{background:var(--red);color:#F6EADB}
 .gets-sec .label{color:var(--gold-l)}
 .gets-sec h2{color:#FFF7EC}.gets-sec h2 em{color:var(--gold-l)}
@@ -213,6 +222,7 @@ footer img{height:28px;width:auto}
       <div class="hero-actions">
         <a class="btn btn-light" href="#price">אני רוצה להצטרף</a>
       </div>
+      <p class="hcd" id="hcd"><span class="hcd-l">ההרשמה נסגרת:</span><b><span id="hcd-d"></span><bdi id="hcd-v"></bdi></b></p>
     </div>
     <figure class="portrait">
       <div class="frame"><img src="assets/ari.jpg" alt="ארי אלקלעי"></div>
@@ -331,8 +341,9 @@ footer img{height:28px;width:auto}
         <p class="now"><span class="pre">3 תשלומים של</span>1,230 <small>₪</small></p>
         <p class="total">סה״כ 3,690 ₪</p>
         <div class="cd" id="cd">
-          <p class="cd-t">המחיר הזה בתוקף עד סוף החודש, 30.11</p>
-          <div class="cd-n"><span><b id="cd-d">0</b>ימים</span><span><b id="cd-h">00</b>שעות</span><span><b id="cd-m">00</b>דקות</span><span><b id="cd-s">00</b>שניות</span></div>
+          <p class="cd-t">המחיר המיוחד שמור עד:</p>
+          <span class="cd-date">30.11</span>
+          <div class="cd-n"><span><b id="cd-d">00</b>ימים</span><i>:</i><span><b id="cd-h">00</b>שעות</span><i>:</i><span><b id="cd-m">00</b>דקות</span><i>:</i><span><b id="cd-s">00</b>שניות</span></div>
         </div>
         <div class="actions">
           <a class="btn btn-red" href="https://secure.cardcom.solutions/EA/EA5/tuMHTVX2Rke5K5cgdjAg6A/PaymentSP">להרשמה ותשלום</a>
@@ -371,7 +382,12 @@ addEventListener('scroll',f,{passive:true});f();
 (function(){var end=Date.parse('2026-11-30T23:59:00+02:00'),el=document.getElementById('cd');if(!el)return;
 function p(n){return n<10?'0'+n:''+n}
 function t(){var r=end-Date.now();if(r<=0){el.classList.add('ended');el.querySelector('.cd-t').textContent='המחיר המיוחד הסתיים ב-30.11';return clearInterval(i)}
-var x=Math.floor(r/1000);document.getElementById('cd-d').textContent=Math.floor(x/86400);document.getElementById('cd-h').textContent=p(Math.floor(x%86400/3600));document.getElementById('cd-m').textContent=p(Math.floor(x%3600/60));document.getElementById('cd-s').textContent=p(x%60)}
+var x=Math.floor(r/1000);document.getElementById('cd-d').textContent=p(Math.floor(x/86400));document.getElementById('cd-h').textContent=p(Math.floor(x%86400/3600));document.getElementById('cd-m').textContent=p(Math.floor(x%3600/60));document.getElementById('cd-s').textContent=p(x%60)}
+var i=setInterval(t,1000);t()})();
+(function(){var end=Date.parse('2026-11-30T23:59:00+02:00'),el=document.getElementById('hcd');if(!el)return;
+function p(n){return n<10?'0'+n:''+n}
+function t(){var r=end-Date.now();if(r<=0){el.classList.add('ended');el.querySelector('.hcd-l').textContent='ההרשמה נסגרה';return clearInterval(i)}
+var x=Math.floor(r/1000),d=Math.floor(x/86400);document.getElementById('hcd-d').textContent=d?d+(d==1?' יום':' ימים')+' · ':'';document.getElementById('hcd-v').textContent=p(Math.floor(x%86400/3600))+':'+p(Math.floor(x%3600/60))+':'+p(x%60)}
 var i=setInterval(t,1000);t()})();
 </script>
 </body>
