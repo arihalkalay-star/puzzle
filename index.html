@@ -117,10 +117,13 @@ h1,h2,h3,.serif{font-family:var(--serif);font-weight:700;letter-spacing:0}
 .offer{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--ink);background:var(--paper)}
 .offer > div{padding:52px 48px}
 .offer .left{border-left:1px solid var(--ink)}
-.offer .old{color:var(--muted);font-size:17px}
-.offer .old s{text-decoration-color:var(--red);text-decoration-thickness:2px}
-.offer .now{font-family:var(--serif);font-size:84px;line-height:1;color:var(--ink);margin-top:10px;font-weight:700}
-.offer .now small{font-size:34px;font-weight:500;margin-right:6px}
+.offer .old{color:#5E4C48;font-size:20px;font-weight:600}
+.offer .old s{text-decoration:none;position:relative;white-space:nowrap}
+.offer .old s:after{content:"";position:absolute;left:-3px;right:-3px;top:54%;height:1.5px;background:var(--red);transform:rotate(-4deg)}
+.offer .now{font-family:var(--serif);font-size:84px;line-height:1;color:var(--ink);margin-top:22px;font-weight:700}
+.offer .now small{font-size:34px;font-weight:600;margin-right:4px}
+.offer .now .pre{display:block;font-size:22px;font-weight:600;color:var(--ink-2);margin-bottom:6px}
+.offer .total{font-size:16px;color:var(--muted);margin-top:8px}
 .offer .when{color:var(--ink-2);margin-top:8px}
 .offer ul{list-style:none;margin-top:4px}
 .offer li{padding:14px 0;border-bottom:1px solid var(--rule);color:var(--ink-2)}
@@ -286,7 +289,8 @@ footer img{height:28px;width:auto}
     <div class="offer">
       <div>
         <p class="old">מחיר מלא: <s>12,300 ₪</s></p>
-        <p class="now">3,690<small>₪</small></p>
+        <p class="now"><span class="pre">3 תשלומים של</span>1,230 <small>₪</small></p>
+        <p class="total">סה״כ 3,690 ₪</p>
         <p class="when">למי שנרשם עכשיו</p>
         <div class="actions">
           <a class="btn btn-red" href="https://secure.cardcom.solutions/EA/EA5/tuMHTVX2Rke5K5cgdjAg6A/PaymentSP">להרשמה ותשלום</a>
