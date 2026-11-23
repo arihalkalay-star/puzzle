@@ -8,200 +8,314 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="לחבר את הפאזל | אתגר של 3 שבועות">
 <meta property="og:description" content="פיתוח עסקי מואץ עם תוצאות מהירות. קבוצה קטנה, ליווי אישי, רק 4 מקומות.">
-<!-- אחרי הפרסום: להחליף ל-URL המלא, למשל https://arihalkalay-star.github.io/puzzle/assets/og-cover.jpg -->
 <meta property="og:image" content="https://arihalkalay-star.github.io/puzzle/assets/og-cover.jpg">
 <meta property="og:locale" content="he_IL">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#6a0709">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#7a090b">
+<link rel="stylesheet" href="assets/fonts.css">
 <style>
 :root{
-  --red:#800A0C; --red-2:#6a0709; --red-3:#4e0406;
-  --gold:#C9A04E; --gold-l:#E2BA62;
-  --ink:#2A1A1A; --ink-2:#5E4C48; --muted:#8A7A74;
-  --cream:#FBF7F0; --white:#FFFFFF; --line:#ECE3D6;
+  --red:#7E0A0C; --red-d:#5A0507; --gold:#B8914A; --gold-l:#DDB869;
+  --ink:#221615; --ink-2:#55433F; --muted:#8C7D77;
+  --cream:#F8F2E8; --paper:#FFFDF9; --rule:#E4D8C6;
+  --serif:"Frank Ruhl Libre",Georgia,serif; --sans:"Open Sans",system-ui,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"Open Sans",system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.7;font-size:18px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+img{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:700;letter-spacing:0}
+
+/* header */
+.masthead{background:var(--paper);border-bottom:1px solid var(--rule)}
+.masthead .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.masthead img{height:44px;width:auto}
+.masthead a.link{font-size:15px;font-weight:600;color:var(--red);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
 
 /* hero */
-.hero-band{color:#F5E8D0;background:radial-gradient(ellipse 110% 90% at 50% 0%,#8E0D10 0%,var(--red-2) 50%,var(--red-3) 100%);position:relative;overflow:hidden}
-.hero-band:after{content:"";position:absolute;inset:auto 0 0 0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-l),transparent);opacity:.6}
-.top{display:flex;justify-content:space-between;align-items:center;padding:26px 0}
-.brand{font-weight:700;font-size:15px;letter-spacing:.14em;color:var(--gold-l)}
-.brand small{display:block;color:#E9D9BD;font-weight:400;font-size:12px;letter-spacing:.04em;opacity:.8}
-.top a.mini{font-size:14px;font-weight:600;text-decoration:none;border:1px solid rgba(226,186,98,.45);padding:8px 18px;border-radius:999px;color:#F5E8D0}
-.hero{text-align:center;padding:64px 0 96px}
-.hero h1{font-size:clamp(42px,10.5vw,100px);font-weight:800;line-height:1.05;letter-spacing:-.01em;
-  background:linear-gradient(180deg,#FBE7AE 0%,#E2BA62 55%,#B4873A 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero .sub{font-size:clamp(19px,2.4vw,24px);margin-top:10px;color:#F5E8D0}
-.divider{width:64px;height:1px;background:var(--gold-l);margin:26px auto}
-.hero .lead{max-width:620px;margin:0 auto;color:#E9D9BD;font-size:19px}
-.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px}
-.chip{border:1px solid rgba(226,186,98,.35);padding:7px 16px;border-radius:999px;font-size:14px;color:#F5E8D0}
-.hero .cta{background:linear-gradient(180deg,#F1CF7F,#D6A64F);color:#4a0406}
+.hero{background:var(--red);color:#F6EADB;position:relative}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 90% at 85% 10%,rgba(255,255,255,.07),transparent 60%),linear-gradient(180deg,transparent 60%,rgba(0,0,0,.18));pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center;padding-top:80px;padding-bottom:80px;position:relative}
+.kicker{font-size:15px;font-weight:600;color:var(--gold-l);display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.kicker:after{content:"";height:1px;width:56px;background:var(--gold-l);opacity:.7}
+.hero h1{font-size:clamp(46px,7vw,88px);line-height:1.02;color:#FFF7EC;font-weight:700}
+.hero .sub{font-family:var(--serif);font-weight:500;font-size:clamp(21px,2.4vw,27px);color:var(--gold-l);margin-top:14px}
+.hero .lead{font-size:19px;max-width:520px;margin-top:26px;color:#EBD9C6}
+.facts{display:flex;flex-wrap:wrap;margin-top:30px;border-top:1px solid rgba(221,184,105,.35);padding-top:18px;font-size:15px;color:#EBD9C6}
+.facts span{padding-left:18px;margin-left:18px;border-left:1px solid rgba(221,184,105,.35)}
+.facts span:last-child{border:0;margin:0;padding:0}
+.hero-actions{display:flex;align-items:center;gap:26px;margin-top:36px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:17px;padding:16px 34px;border-radius:4px;transition:background .15s,transform .15s}
+.btn-light{background:#FFF7EC;color:var(--red)}
+.btn-light:hover{background:#fff}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-d)}
+.hero .price-hint{font-size:15px;color:#EBD9C6}
+.hero .price-hint b{color:#fff;font-weight:700}
+.portrait{position:relative}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px;filter:saturate(.92)}
+.portrait .frame{position:relative}
+.portrait .frame:after{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--gold-l);opacity:.55;pointer-events:none}
+.portrait figcaption{font-size:14px;color:#EBD9C6;margin-top:30px}
+.portrait figcaption b{font-family:var(--serif);font-size:18px;color:#FFF7EC;display:block;font-weight:700}
 
-/* buttons */
-.cta{display:inline-flex;align-items:center;justify-content:center;margin-top:36px;padding:17px 42px;border-radius:999px;text-decoration:none;
-  background:var(--red);color:#fff;font-weight:700;font-size:18px;letter-spacing:.01em;box-shadow:0 10px 24px rgba(128,10,12,.22);transition:transform .15s,box-shadow .15s}
-.cta:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(128,10,12,.3)}
-.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none;font-weight:600;white-space:nowrap;padding:13px 28px;margin-top:14px;font-size:16px}
+/* sections */
+.sec{padding:110px 0}
+.sec.cream{background:var(--cream)}
+.label{font-size:14px;font-weight:700;color:var(--gold);margin-bottom:14px}
+.sec h2{font-size:clamp(32px,4.2vw,50px);line-height:1.12;max-width:720px}
+.sec h2 em{font-style:normal;color:var(--red)}
+.intro{font-size:20px;color:var(--ink-2);max-width:620px;margin-top:20px}
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
 
-/* bands */
-.band{padding:96px 0;background:var(--white)}
-.band.alt{background:var(--cream)}
-.eyebrow{color:var(--gold);font-weight:700;font-size:15px;margin-bottom:12px}
-h2{font-size:clamp(28px,3.8vw,40px);font-weight:800;line-height:1.2;margin-bottom:40px;color:var(--ink);letter-spacing:-.01em}
-h2 span{color:var(--red)}
+/* pull quote */
+.pull{padding:90px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.pull blockquote{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3.6vw,44px);line-height:1.3;max-width:900px;color:var(--ink)}
+.pull blockquote:before{content:"”";display:block;font-family:var(--serif);color:var(--gold);font-size:96px;line-height:.6;height:44px}
+.attr{margin-top:22px;font-size:15px;color:var(--muted)}
+.attr:before{content:"";display:inline-block;width:28px;height:1px;background:var(--gold);vertical-align:middle;margin-left:12px}
 
-.card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:32px;box-shadow:0 1px 2px rgba(42,26,26,.04),0 10px 30px rgba(42,26,26,.05)}
-.card h3{font-size:21px;font-weight:700;margin-bottom:8px;color:var(--ink)}
-.card p{color:var(--ink-2);font-size:17px}
+/* who */
+.who-list{list-style:none;border-top:1px solid var(--rule)}
+.who-list li{padding:26px 0;border-bottom:1px solid var(--rule)}
+.who-list h3{font-size:24px;margin-bottom:4px}
+.who-list p{color:var(--ink-2)}
 
-.who{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.who .card{border-top:3px solid var(--red)}
+/* numbered */
+.steps{list-style:none;margin-top:56px;border-top:1px solid var(--ink)}
+.steps li{display:grid;grid-template-columns:110px 260px 1fr;gap:28px;align-items:baseline;padding:30px 0;border-bottom:1px solid var(--rule)}
+.steps .n{font-family:var(--serif);font-size:56px;line-height:1;color:var(--gold);font-weight:500}
+.steps h3{font-size:28px}
+.steps p{color:var(--ink-2);font-size:18px}
+.outcome{margin-top:56px;display:grid;grid-template-columns:110px 1fr;gap:28px;align-items:start;background:var(--red);color:#F6EADB;padding:44px 40px}
+.outcome .n{font-family:var(--serif);font-size:20px;color:var(--gold-l)}
+.outcome h3{font-size:32px;color:#FFF7EC;margin-bottom:8px}
+.outcome p{color:#EBD9C6;max-width:640px}
 
-.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
-.bento .card{grid-column:span 2}
-.bento .half{grid-column:span 3}
-.bento .num{font-size:14px;font-weight:700;color:var(--gold);letter-spacing:.08em;margin-bottom:10px}
-.bento .wide{grid-column:span 6;background:linear-gradient(135deg,#fff 0%,#FBF3E4 100%);border-color:#E8D7B5;padding:40px}
-.bento .wide h3{font-size:28px;color:var(--red)}
-.bento .wide p{font-size:18px;max-width:760px}
+/* quotes duo */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:72px;margin-top:56px}
+.duo blockquote{font-family:var(--serif);font-weight:500;font-size:27px;line-height:1.4;border-top:2px solid var(--gold);padding-top:26px}
 
-.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.quote{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:34px 34px 28px;box-shadow:0 10px 30px rgba(42,26,26,.05)}
-.quote:before{content:"”";display:block;height:30px;font-size:64px;line-height:1;color:var(--gold);font-weight:800}
-.quote p{font-size:21px;font-weight:600;color:var(--ink);margin-top:10px;line-height:1.55}
-.quote span{display:block;margin-top:18px;font-size:14px;color:var(--muted)}
-.band:not(.alt) .quote{background:var(--cream);box-shadow:none}
+/* how */
+.how{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;border-top:1px solid var(--ink)}
+.how div{padding:28px 28px 4px;border-left:1px solid var(--rule)}
+.how div:first-child{padding-right:0}
+.how div:last-child{border-left:0}
+.how .big{font-family:var(--serif);font-size:64px;line-height:1;color:var(--red);font-weight:700}
+.how p{margin-top:14px;color:var(--ink-2);font-size:17px}
 
-.how{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
-.how .big{font-size:46px;font-weight:800;color:var(--red);line-height:1.1}
-.how .card p{margin-top:8px;font-size:16px}
+/* about */
+.about{display:grid;grid-template-columns:280px 1fr;gap:64px;align-items:center}
+.about img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%}
+.about p.label{font-size:14px;color:var(--gold);margin:0 0 14px}
+.about p:not(.label){font-size:20px;color:var(--ink-2);margin-top:16px;max-width:620px}
+.about .sig{font-family:var(--serif);font-size:24px;color:var(--ink);margin-top:20px}
 
-.price{text-align:center;max-width:600px;margin:0 auto;background:var(--white);border:1px solid #E8D7B5;border-radius:28px;padding:52px 32px;box-shadow:0 20px 50px rgba(42,26,26,.08)}
-.price .old{color:var(--muted);font-size:18px}
-.price .old s{text-decoration-thickness:2px;text-decoration-color:var(--red)}
-.price .now{font-size:clamp(54px,9vw,76px);font-weight:800;color:var(--ink);line-height:1.1;margin-top:6px}
-.price .now small{font-size:.42em;font-weight:600;color:var(--ink-2)}
-.price ul{list-style:none;margin:26px auto 0;display:inline-block;text-align:right}
-.price li{padding:6px 0;color:var(--ink-2)}
-.price li:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-left:12px;vertical-align:middle}
-.note{font-size:14px;color:var(--muted);margin-top:14px}
+/* price */
+.offer{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--ink);background:var(--paper)}
+.offer > div{padding:52px 48px}
+.offer .left{border-left:1px solid var(--ink)}
+.offer .old{color:var(--muted);font-size:17px}
+.offer .old s{text-decoration-color:var(--red);text-decoration-thickness:2px}
+.offer .now{font-family:var(--serif);font-size:84px;line-height:1;color:var(--ink);margin-top:10px;font-weight:700}
+.offer .now small{font-size:34px;font-weight:500;margin-right:6px}
+.offer .when{color:var(--ink-2);margin-top:8px}
+.offer ul{list-style:none;margin-top:4px}
+.offer li{padding:14px 0;border-bottom:1px solid var(--rule);color:var(--ink-2)}
+.offer li:last-child{border:0}
+.offer .actions{margin-top:30px;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.offer .wa{font-size:16px;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px}
+.offer .note{font-size:14px;color:var(--muted)}
 
-footer{text-align:center;padding:48px 0 120px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
-footer .brand{color:var(--red);display:inline-block;margin-bottom:6px}
+footer{padding:44px 0 120px;border-top:1px solid var(--rule)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;color:var(--muted);font-size:14px}
+footer img{height:28px;width:auto}
 
 .sticky{display:none}
-@media (max-width:760px){
+@media (max-width:860px){
   body{font-size:17px}
-  .wrap{padding:0 20px}
-  .band{padding:64px 0}
-  .hero{padding:32px 0 64px}
-  .who,.quotes{grid-template-columns:1fr}
-  .bento{grid-template-columns:1fr}
-  .bento .card,.bento .half,.bento .wide{grid-column:auto}
-  .bento .wide{padding:32px}
-  .how{grid-template-columns:1fr 1fr;gap:14px}
-  .card{padding:26px}
-  .top a.mini{display:none}
-  .sticky{display:block;transform:translateY(110%);transition:transform .25s;position:fixed;bottom:0;left:0;right:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);z-index:10}
+  .wrap{padding:0 22px}
+  .masthead .wrap{height:64px}
+  .masthead img{height:26px}
+  .hero .wrap{grid-template-columns:1fr;gap:40px;padding-top:48px;padding-bottom:56px}
+  .portrait{max-width:280px}
+  .facts{flex-direction:column;gap:6px}
+  .facts span{border:0;margin:0;padding:0}
+  .facts span:before{content:"";display:inline-block;width:14px;height:1px;background:var(--gold-l);vertical-align:middle;margin-left:10px}
+  .portrait .frame:after{inset:10px -10px -10px 10px}
+  .sec{padding:72px 0}
+  .pull{padding:60px 0}
+  .split,.duo,.about{grid-template-columns:1fr;gap:36px}
+  .steps li{grid-template-columns:64px 1fr;gap:6px 18px;padding:24px 0}
+  .steps .n{font-size:40px;grid-row:span 2}
+  .steps h3{font-size:24px}
+  .outcome{grid-template-columns:1fr;gap:6px;padding:32px 26px}
+  .outcome h3{font-size:27px}
+  .how{grid-template-columns:1fr 1fr}
+  .how div{padding:24px 0 24px 18px;border-bottom:1px solid var(--rule)}
+  .how div:nth-child(2n){border-left:0}
+  .how div:nth-child(2n+1){padding-right:0}
+  .how div:nth-child(2n){padding-right:18px;padding-left:0}
+  .how .big{font-size:48px}
+  .about img{width:160px}
+  .offer{grid-template-columns:1fr}
+  .offer > div{padding:36px 26px}
+  .offer .left{border-left:0;border-top:1px solid var(--ink)}
+  .offer .now{font-size:68px}
+  footer .wrap{flex-direction:column;text-align:center}
+  .sticky{display:block;transform:translateY(110%);transition:transform .25s;position:fixed;bottom:0;left:0;right:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,253,249,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--rule);z-index:10}
   .sticky.on{transform:none}
-  .sticky .cta{width:100%;margin:0;padding:15px}
+  .sticky .btn{display:block;text-align:center}
 }
 </style>
 </head>
 <body>
-<div class="hero-band"><div class="wrap">
-  <header class="top">
-    <div class="brand">ALKALAY CONSULTING<small>פיתוח עסקי עם נשמה</small></div>
-    <a class="mini js-pay" href="#price">להרשמה</a>
-  </header>
 
-  <section class="hero">
-    <h1>לחבר את הפאזל</h1>
-    <p class="sub">פיתוח עסקי מואץ עם תוצאות מהירות</p>
-    <div class="divider"></div>
-    <p class="lead">יש לך המון רעיונות, אבל עוד אין תמונה ברורה? באתגר של 3 שבועות מחברים את כל החלקים של העסק לפאזל אחד שעובד.</p>
-    <div class="chips">
-      <span class="chip">3 שבועות</span>
-      <span class="chip">מפגש חי בזום כל שבוע</span>
-      <span class="chip">שיחה אישית אחד על אחד</span>
-      <span class="chip">רק 4 מקומות</span>
+<header class="masthead">
+  <div class="wrap">
+    <img src="assets/logo.png" alt="Alkalay Consulting">
+    <a class="link" href="#price">להרשמה</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker">אתגר של 3 שבועות</div>
+      <h1>לחבר את הפאזל</h1>
+      <p class="sub">פיתוח עסקי מואץ עם תוצאות מהירות</p>
+      <p class="lead">יש לך המון רעיונות, אבל עוד אין תמונה ברורה? באתגר הזה מחברים את כל החלקים של העסק לפאזל אחד שעובד.</p>
+      <div class="facts"><span>מפגש חי בזום כל שבוע</span><span>שיחה אישית אחד על אחד</span><span>רק 4 מקומות</span></div>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="#price">אני רוצה להצטרף</a>
+        <span class="price-hint">למי שנרשם עכשיו: <b>3,690 ₪</b></span>
+      </div>
     </div>
-    <a class="cta js-pay" href="#price">אני רוצה להצטרף</a>
-  </section></div></div>
-<section class="band alt"><div class="wrap">
-    <div class="quotes" style="grid-template-columns:1fr;max-width:720px;margin:0 auto">
-      <div class="quote"><p>וואו, מדהים. אני יכולה להקשיב לו שעות. ידע אין סופי. שיעור חובה.</p><span>משתתפת בקבוצת סודות הזוהר לעסקים</span></div>
+    <figure class="portrait">
+      <div class="frame"><img src="assets/ari.jpg" alt="ארי אלקלעי"></div>
+      <figcaption><b>ארי אלקלעי</b>Alkalay Consulting</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="pull">
+  <div class="wrap">
+    <blockquote>וואו, מדהים. אני יכולה להקשיב לו שעות. ידע אין סופי. שיעור חובה.</blockquote>
+    <p class="attr">משתתפת בקבוצת סודות הזוהר לעסקים</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split">
+    <div>
+      <p class="label">למי זה מתאים</p>
+      <h2>האתגר הזה <em>בשבילך</em> אם</h2>
     </div>
-  </div></section><section class="band "><div class="wrap">
-    <p class="eyebrow">למי זה מתאים</p>
-    <h2>האתגר הזה <span>בשבילך</span> אם</h2>
-    <div class="who">
-      <div class="card"><h3>בעלי עסקים ויזמים</h3><p>שיש להם הרבה רעיונות, וחסר להם כיוון ומבנה שמחבר את הכול.</p></div>
-      <div class="card"><h3>בתחילת דרך או בשינוי</h3><p>ורוצים לבנות נכון מההתחלה, לא לפי מזל.</p></div>
+    <ul class="who-list">
+      <li><h3>את/ה בעל/ת עסק או יזם/ית</h3><p>יש לך הרבה רעיונות, וחסר לך כיוון ומבנה שמחבר את הכול.</p></li>
+      <li><h3>את/ה בתחילת דרך או בשינוי</h3><p>ורוצה לבנות נכון מההתחלה, לא לפי מזל.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec cream">
+  <div class="wrap">
+    <p class="label">מה בונים ב-3 שבועות</p>
+    <h2>חמשת החלקים של <em>הפאזל</em></h2>
+    <ol class="steps">
+      <li><span class="n">01</span><h3>הלקוח</h3><p>מגלים מי בדיוק צריך אותך, מה כואב לו, ומה יגרום לו להגיד "זה בשבילי".</p></li>
+      <li><span class="n">02</span><h3>המוצר</h3><p>הופכים את מה שאת/ה יודע/ת להצעה אחת חדה, שקל להסביר וקל לקנות.</p></li>
+      <li><span class="n">03</span><h3>התמחור</h3><p>נגמר הניחוש. מחיר שמכבד אותך ואת הלקוח, בלי להתנצל עליו.</p></li>
+      <li><span class="n">04</span><h3>תוכנית פיננסית</h3><p>מספרים פשוטים: כמה צריך להכניס, כמה זה עולה, ולאן העסק הולך.</p></li>
+      <li><span class="n">05</span><h3>שיווק ומכירות</h3><p>דרך פשוטה להגיע ללקוחות, גם בלי רשתות חברתיות, וגם איך סוגרים עסקה.</p></li>
+    </ol>
+    <div class="outcome">
+      <span class="n">התוצאה</span>
+      <div><h3>מפה ברורה לעסק שלך</h3><p>במקום עשרות רעיונות מפוזרים בראש, יוצאים עם תמונה אחת שלמה שרואים על דף אחד, ותוכנית ל-90 הימים הבאים: מה עושים ובאיזה סדר.</p></div>
     </div>
-  </div></section><section class="band alt"><div class="wrap">
-    <p class="eyebrow">מה בונים ב-3 שבועות</p>
-    <h2>חמשת החלקים של <span>הפאזל</span></h2>
-    <div class="bento">
-      <div class="card wide"><div class="num">התוצאה</div><h3>מפה ברורה לעסק שלך</h3><p>במקום עשרות רעיונות מפוזרים בראש, יוצאים עם תמונה אחת שלמה שרואים על דף אחד, ותוכנית ל-90 הימים הבאים: מה עושים ובאיזה סדר.</p></div>
-      <div class="card"><div class="num">01</div><h3>הלקוח</h3><p>מגלים מי בדיוק צריך אותך, מה כואב לו, ומה יגרום לו להגיד "זה בשבילי".</p></div>
-      <div class="card"><div class="num">02</div><h3>המוצר</h3><p>הופכים את מה שאת/ה יודע/ת להצעה אחת חדה, שקל להסביר וקל לקנות.</p></div>
-      <div class="card"><div class="num">03</div><h3>התמחור</h3><p>נגמר הניחוש. מחיר שמכבד אותך ואת הלקוח, בלי להתנצל עליו.</p></div>
-      <div class="card half"><div class="num">04</div><h3>תוכנית פיננסית</h3><p>מספרים פשוטים: כמה צריך להכניס, כמה זה עולה, ולאן העסק הולך.</p></div>
-      <div class="card half"><div class="num">05</div><h3>שיווק ומכירות</h3><p>דרך פשוטה להגיע ללקוחות, גם בלי רשתות חברתיות, וגם איך סוגרים עסקה.</p></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="label">מה אומרים בקבוצה</p>
+    <h2>מילים של <em>משתתפים</em></h2>
+    <div class="duo">
+      <div><blockquote>חיפשתי תדר כזה כבר כמה זמן, וזה בדיוק מה שאני צריכה. החיבור לעסק והחיבור לזוהר.</blockquote><p class="attr">משתתפת בקבוצת סודות הזוהר לעסקים</p></div>
+      <div><blockquote>זה הוריד לי עוד אסימון שנתן לי כל כך מוטיבציה, וגם יצר עשייה והנאה מהדרך.</blockquote><p class="attr">משתתפת בקבוצת סודות הזוהר לעסקים</p></div>
     </div>
-    <div style="text-align:center"><a class="cta js-pay" href="#price">שמרו לי מקום</a></div>
-  </div></section><section class="band "><div class="wrap">
-    <p class="eyebrow">מה אומרים בקבוצה</p>
-    <h2>מילים של <span>משתתפים</span></h2>
-    <div class="quotes">
-      <div class="quote"><p>חיפשתי תדר כזה כבר כמה זמן, וזה בדיוק מה שאני צריכה. החיבור לעסק והחיבור לזוהר.</p><span>משתתפת בקבוצת סודות הזוהר לעסקים</span></div>
-      <div class="quote"><p>זה הוריד לי עוד אסימון שנתן לי כל כך מוטיבציה, וגם יצר עשייה והנאה מהדרך.</p><span>משתתפת בקבוצת סודות הזוהר לעסקים</span></div>
-    </div>
-  </div></section><section class="band alt"><div class="wrap">
-    <p class="eyebrow">איך זה עובד</p>
-    <h2>קטן, אישי <span>וממוקד</span></h2>
+  </div>
+</section>
+
+<section class="sec cream">
+  <div class="wrap">
+    <p class="label">איך זה עובד</p>
+    <h2>קטן, אישי <em>וממוקד</em></h2>
     <div class="how">
-      <div class="card"><div class="big">3</div><p>שבועות של עבודה ממוקדת</p></div>
-      <div class="card"><div class="big">1</div><p>מפגש חי בזום כל שבוע, בקבוצה קטנה</p></div>
-      <div class="card"><div class="big">1:1</div><p>שיחה אישית רק על העסק שלך</p></div>
-      <div class="card"><div class="big">4</div><p>מקומות בלבד. מתחילים מיד</p></div>
+      <div><span class="big">3</span><p>שבועות של עבודה ממוקדת</p></div>
+      <div><span class="big">1</span><p>מפגש חי בזום כל שבוע, בקבוצה קטנה</p></div>
+      <div><span class="big">1:1</span><p>שיחה אישית רק על העסק שלך</p></div>
+      <div><span class="big">4</span><p>מקומות בלבד. מתחילים מיד</p></div>
     </div>
-  </div></section><section class="band "><div class="wrap">
-    <div class="quotes" style="grid-template-columns:1fr;max-width:720px;margin:0 auto">
-      <div class="quote"><p>ענית לי בדיוק לשאלה המתבקשת: איפה עובר הגבול. לקחתי לתשומת ליבי.</p><span>משתתפת בקבוצת סודות הזוהר לעסקים</span></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap about">
+    <img src="assets/ari.jpg" alt="ארי אלקלעי">
+    <div>
+      <p class="label">מי אני</p>
+      <h2>נעים מאוד, ארי</h2>
+      <p>אני ארי אלקלעי, יועץ לפיתוח עסקי ומייסד Alkalay Consulting. אני עוזר לבעלי עסקים להפוך רעיונות למבנה שעובד: לקוח, מוצר, מחיר ותוכנית. אני גם מלמד את "סודות הזוהר לעסקים", פיתוח עסקי עם נשמה.</p>
     </div>
-  </div></section><section id="price" class="band alt"><div class="wrap">
-    <div class="price">
-      <p class="eyebrow">השקעה</p>
-      <div class="old">מחיר מלא: <s>12,300 ₪</s></div>
-      <div class="now">3,690 <small>₪</small></div>
-      <p>למי שנרשם עכשיו</p>
-      <ul>
-        <li>3 מפגשים חיים בזום</li>
-        <li>שיחה אישית אחד על אחד</li>
-        <li>מפה ברורה ותוכנית ל-90 יום</li>
-      </ul>
-      <div><a class="cta" id="pay" href="https://secure.cardcom.solutions/EA/EA5/tuMHTVX2Rke5K5cgdjAg6A/PaymentSP">להרשמה ותשלום</a></div>
-      <div><a class="cta ghost" href="https://wa.me/972523313827?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A8%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%20%D7%A2%D7%9C%20%D7%94%D7%90%D7%AA%D7%92%D7%A8%20%22%D7%9C%D7%97%D7%91%D7%A8%20%D7%90%D7%AA%20%D7%94%D7%A4%D7%90%D7%96%D7%9C%22" target="_blank" rel="noopener">שאלות? כתבו לי בוואטסאפ</a></div>
-      <p class="note">רק 4 מקומות בקבוצה</p>
+  </div>
+</section>
+
+<section class="pull">
+  <div class="wrap">
+    <blockquote>ענית לי בדיוק לשאלה המתבקשת: איפה עובר הגבול. לקחתי לתשומת ליבי.</blockquote>
+    <p class="attr">משתתפת בקבוצת סודות הזוהר לעסקים</p>
+  </div>
+</section>
+
+<section class="sec cream" id="price">
+  <div class="wrap">
+    <p class="label">השקעה</p>
+    <h2 style="margin-bottom:48px">מקום אחד מתוך <em>ארבעה</em></h2>
+    <div class="offer">
+      <div>
+        <p class="old">מחיר מלא: <s>12,300 ₪</s></p>
+        <p class="now">3,690<small>₪</small></p>
+        <p class="when">למי שנרשם עכשיו</p>
+        <div class="actions">
+          <a class="btn btn-red" href="https://secure.cardcom.solutions/EA/EA5/tuMHTVX2Rke5K5cgdjAg6A/PaymentSP">להרשמה ותשלום</a>
+          <a class="wa" href="https://wa.me/972523313827?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A8%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%20%D7%A2%D7%9C%20%D7%94%D7%90%D7%AA%D7%92%D7%A8%20%22%D7%9C%D7%97%D7%91%D7%A8%20%D7%90%D7%AA%20%D7%94%D7%A4%D7%90%D7%96%D7%9C%22" target="_blank" rel="noopener">שאלות? כתבו לי בוואטסאפ</a>
+        </div>
+      </div>
+      <div class="left">
+        <p class="label">מה כלול</p>
+        <ul>
+          <li>3 מפגשים חיים בזום, בקבוצה קטנה</li>
+          <li>שיחה אישית אחד על אחד</li>
+          <li>עבודה על חמשת החלקים של הפאזל</li>
+          <li>מפה ברורה ותוכנית ל-90 יום</li>
+        </ul>
+        <p class="note" style="margin-top:18px">רק 4 מקומות בקבוצה</p>
+      </div>
     </div>
-  </div></section>
-<div class="wrap"><footer>
-    <div class="brand">ALKALAY CONSULTING</div>
-    <div>ארי אלקלעי | פיתוח עסקי עם נשמה</div>
-  </footer>
-</div>
-<div class="sticky"><a class="cta js-pay" href="#price">להרשמה | 3,690 ₪</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo.png" alt="Alkalay Consulting">
+    <span>ארי אלקלעי | פיתוח עסקי עם נשמה</span>
+  </div>
+</footer>
+
+<div class="sticky"><a class="btn btn-red" href="#price">להרשמה | 3,690 ₪</a></div>
 
 <script>
 const st=document.querySelector('.sticky'),hero=document.querySelector('.hero'),pr=document.getElementById('price');
