@@ -171,6 +171,8 @@ footer img{height:28px;width:auto}
   .sticky{display:block;transform:translateY(110%);transition:transform .25s;position:fixed;bottom:0;left:0;right:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,253,249,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--rule);z-index:10}
   .sticky.on{transform:none}
   .sticky .btn{display:block;text-align:center}
+  .scd{margin:6px 0 0;text-align:center;font-size:12px;line-height:1.3;color:#6b5a4a}
+  .scd bdi{direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums;font-feature-settings:"tnum";color:var(--red);font-weight:600}
 }
 .cd{margin:20px 0 8px;padding:20px 24px 18px;border-radius:14px;background:var(--red);color:#F6EADB;max-width:380px;text-align:center;box-shadow:0 10px 28px rgba(90,5,7,.22);position:relative}
 .cd:before{content:"";position:absolute;inset:5px;border:1px solid rgba(221,184,105,.45);border-radius:10px;pointer-events:none}
@@ -371,7 +373,7 @@ footer img{height:28px;width:auto}
   </div>
 </footer>
 
-<div class="sticky"><a class="btn btn-red" href="#price">להרשמה</a></div>
+<div class="sticky"><a class="btn btn-red" href="#price">להרשמה</a><p class="scd" id="scd">נסגר בעוד <span id="scd-d"></span><bdi id="scd-v"></bdi></p></div>
 
 <script>
 const st=document.querySelector('.sticky'),hero=document.querySelector('.hero'),pr=document.getElementById('price');
@@ -388,6 +390,13 @@ var i=setInterval(t,1000);t()})();
 function p(n){return n<10?'0'+n:''+n}
 function t(){var r=end-Date.now();if(r<=0){el.classList.add('ended');el.querySelector('.hcd-l').textContent='ההרשמה נסגרה';return clearInterval(i)}
 var x=Math.floor(r/1000),d=Math.floor(x/86400);document.getElementById('hcd-d').textContent=d?d+(d==1?' יום':' ימים')+' · ':'';document.getElementById('hcd-v').textContent=p(Math.floor(x%86400/3600))+':'+p(Math.floor(x%3600/60))+':'+p(x%60)}
+var i=setInterval(t,1000);t()})();
+</script>
+<script>
+(function(){var end=Date.parse('2026-11-30T23:59:00+02:00'),el=document.getElementById('scd');if(!el)return;
+function p(n){return n<10?'0'+n:''+n}
+function t(){var r=end-Date.now();if(r<=0){el.textContent='ההרשמה נסגרה';return clearInterval(i)}
+var x=Math.floor(r/1000),d=Math.floor(x/86400);document.getElementById('scd-d').textContent=d?d+(d==1?' יום':' ימים')+' · ':'';document.getElementById('scd-v').textContent=p(Math.floor(x%86400/3600))+':'+p(Math.floor(x%3600/60))+':'+p(x%60)}
 var i=setInterval(t,1000);t()})();
 </script>
 </body>
