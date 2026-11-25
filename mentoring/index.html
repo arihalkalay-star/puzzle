@@ -246,6 +246,16 @@ footer img{height:28px;width:auto}
  .extras{grid-template-columns:1fr}
  .hero h1{white-space:normal}
 }
+.fit{margin-top:44px;border-top:1px solid var(--ink)}
+.fit h3{font-size:24px;padding-top:24px}
+.fit ul{list-style:none;margin-top:10px}
+.fit li{border-bottom:1px solid var(--rule)}
+.fit a{display:block;padding:16px 0;text-decoration:none;color:var(--ink-2);font-size:18px}
+.fit a:after{content:" ←";color:var(--gold);font-weight:700}
+.fit a:hover b{text-decoration:underline}
+.fit b{color:var(--red)}
+.track{scroll-margin-top:20px}
+.fit + .tracks{margin-top:40px}
 </style>
 </head>
 <body>
@@ -313,8 +323,16 @@ footer img{height:28px;width:auto}
     <p class="label">המסלולים</p>
     <h2>שלוש דרכים <em>לעבוד יחד</em></h2>
     <p class="intro">מהתחלה מהירה ועד ליווי מלא עם ניהול בזמן אמת.</p>
+    <div class="fit">
+      <h3>איזה מסלול מתאים לך?</h3>
+      <ul>
+        <li><a href="#t-puzzle"><b>לחבר את הפאזל:</b> בתחילת הדרך, או שאתם רוצים להתחיל בצעד קטן ולראות תוצאה מהר.</a></li>
+        <li><a href="#t-4m"><b>ליווי 4 חודשים:</b> יש לכם עסק שעובד, וחסרים כיוון, מודל ותמחור שמחזיקים.</a></li>
+        <li><a href="#t-full"><b>ליווי מלא עם ניהול בזמן אמת:</b> אתם רוצים מישהו לצידכם גם אחרי שהתוכנית מוכנה, עד שהצמיחה יציבה.</a></li>
+      </ul>
+    </div>
     <div class="tracks">
-      <div class="track">
+      <div class="track" id="t-puzzle">
         <span class="tag">מסלול קצר</span>
         <h3>לחבר את הפאזל</h3>
         <p class="dur">3 שבועות, קבוצה קטנה</p>
@@ -328,7 +346,7 @@ footer img{height:28px;width:auto}
         </ul>
         <a class="btn btn-red" href="https://arihalkalay-star.github.io/puzzle/">לפרטים על המסלול</a>
       </div>
-      <div class="track">
+      <div class="track" id="t-4m">
         <span class="tag">ליווי אישי</span>
         <h3>ליווי 4 חודשים</h3>
         <p class="dur">4 חודשים, 2 מפגשים בשבוע</p>
@@ -342,7 +360,7 @@ footer img{height:28px;width:auto}
         </ul>
         <a class="btn btn-red" href="https://wa.me/972523313827?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A8%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93%20%D7%A2%D7%9C%20%D7%94%D7%9C%D7%99%D7%95%D7%95%D7%99%20%D7%94%D7%90%D7%99%D7%A9%D7%99%20%D7%A9%D7%9C%204%20%D7%97%D7%95%D7%93%D7%A9%D7%99%D7%9D" target="_blank" rel="noopener">לשיחת התאמה</a>
       </div>
-      <div class="track feat">
+      <div class="track feat" id="t-full">
         <span class="tag">ליווי מלא</span>
         <h3>ליווי + ניהול בזמן אמת</h3>
         <p class="dur">4 חודשי ליווי, 2 מפגשים בשבוע, ועוד 4 חודשי ניהול בזמן אמת</p>
