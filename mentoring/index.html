@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ליווי עסקי אישי | Alkalay Consulting</title>
+<meta name="description" content="ליווי אישי לפיתוח עסקי עם ארי אלקלעי: מודל עסקי, מודל פיננסי, תמחור, קהל יעד וחדירה לשוק, עד שמגיעים לתוצאות.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ליווי עסקי אישי | Alkalay Consulting">
+<meta property="og:description" content="חברה מוצלחת היא חברה עם מנוע צמיחה יציב, שלא מפחדת מכיסי אוויר.">
+<meta property="og:image" content="https://arihalkalay-star.github.io/puzzle/assets/og-cover.jpg">
+<meta property="og:locale" content="he_IL">
+<meta name="theme-color" content="#7a090b">
+<link rel="stylesheet" href="../assets/fonts.css">
+<style>
+:root{
+  --red:#7E0A0C; --red-d:#5A0507; --gold:#B8914A; --gold-l:#DDB869;
+  --ink:#221615; --ink-2:#55433F; --muted:#8C7D77;
+  --cream:#F8F2E8; --paper:#FFFDF9; --rule:#E4D8C6;
+  --serif:"Open Sans",system-ui,sans-serif; --sans:"Open Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:700;letter-spacing:0}
+
+/* header */
+.masthead{background:var(--paper);border-bottom:1px solid var(--rule)}
+.masthead .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.masthead img{height:44px;width:auto}
+.masthead a.link{font-size:15px;font-weight:600;color:var(--red);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+
+/* hero */
+.hero{background:var(--red);color:#F6EADB;position:relative}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 90% at 85% 10%,rgba(255,255,255,.07),transparent 60%),linear-gradient(180deg,transparent 60%,rgba(0,0,0,.18));pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center;padding-top:80px;padding-bottom:80px;position:relative}
+.kicker{font-size:15px;font-weight:600;color:var(--gold-l);display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.kicker:after{content:"";height:1px;width:56px;background:var(--gold-l);opacity:.7}
+.hero h1{font-size:clamp(40px,6vw,76px);line-height:1.05;white-space:nowrap;color:#FFF7EC;font-weight:700}
+.hero .sub{font-family:var(--serif);font-weight:500;font-size:clamp(21px,2.4vw,27px);color:var(--gold-l);margin-top:14px}
+.hero .lead{font-size:19px;max-width:520px;margin-top:26px;color:#EBD9C6}
+.facts{display:flex;flex-wrap:wrap;margin-top:30px;border-top:1px solid rgba(221,184,105,.35);padding-top:18px;font-size:15px;color:#EBD9C6}
+.facts span{padding-left:18px;margin-left:18px;border-left:1px solid rgba(221,184,105,.35)}
+.facts span:last-child{border:0;margin:0;padding:0}
+.hero-actions{display:flex;align-items:center;gap:26px;margin-top:36px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:17px;padding:16px 34px;border-radius:4px;transition:background .15s,transform .15s}
+.btn-light{background:#FFF7EC;color:var(--red)}
+.btn-light:hover{background:#fff}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-d)}
+.hero .price-hint{font-size:15px;color:#EBD9C6}
+.hero .price-hint b{color:#fff;font-weight:700}
+.portrait{position:relative}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px;filter:saturate(.92)}
+.portrait .frame{position:relative}
+.portrait .frame:after{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--gold-l);opacity:.55;pointer-events:none}
+.portrait figcaption{font-size:14px;color:#EBD9C6;margin-top:30px}
+.portrait figcaption b{font-family:var(--serif);font-size:18px;color:#FFF7EC;display:block;font-weight:700}
+
+/* sections */
+.sec{padding:110px 0}
+.sec.cream{background:var(--cream)}
+.label{font-size:14px;font-weight:700;color:var(--gold);margin-bottom:14px}
+.sec h2{font-size:clamp(32px,4.2vw,50px);line-height:1.12;max-width:720px}
+.sec h2 em{font-style:normal;color:var(--red)}
+.intro{font-size:20px;color:var(--ink-2);max-width:620px;margin-top:20px}
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
+
+/* pull quote */
+.pull{padding:90px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.pull blockquote{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3.6vw,44px);line-height:1.3;max-width:900px;color:var(--ink)}
+.pull blockquote:before{content:"”";display:block;font-family:var(--serif);color:var(--gold);font-size:96px;line-height:.6;height:44px}
+.attr{margin-top:22px;font-size:15px;color:var(--muted)}
+.attr:before{content:"";display:inline-block;width:28px;height:1px;background:var(--gold);vertical-align:middle;margin-left:12px}
+
+/* who */
+.who-list{list-style:none;border-top:1px solid var(--rule)}
+.who-list li{padding:26px 0;border-bottom:1px solid var(--rule)}
+.who-list h3{font-size:24px;margin-bottom:4px}
+.who-list p{color:var(--ink-2)}
+
+/* numbered */
+.steps{list-style:none;margin-top:56px;border-top:1px solid var(--ink)}
+.steps li{display:grid;grid-template-columns:110px 260px 1fr;gap:28px;align-items:baseline;padding:30px 0;border-bottom:1px solid var(--rule)}
+.steps .n{font-family:var(--serif);font-size:56px;line-height:1;color:var(--gold);font-weight:500}
+.steps h3{font-size:28px}
+.steps p{color:var(--ink-2);font-size:18px}
+.outcome{margin-top:56px;display:grid;grid-template-columns:110px 1fr;gap:28px;align-items:start;background:var(--red);color:#F6EADB;padding:44px 40px}
+.outcome .n{font-family:var(--serif);font-size:20px;color:var(--gold-l)}
+.outcome h3{font-size:32px;color:#FFF7EC;margin-bottom:8px}
+.outcome p{color:#EBD9C6;max-width:640px}
+
+/* quotes duo */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:72px;margin-top:56px}
+.duo blockquote{font-family:var(--serif);font-weight:500;font-size:27px;line-height:1.4;border-top:2px solid var(--gold);padding-top:26px}
+
+/* how */
+.how{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;border-top:1px solid var(--ink)}
+.how div{padding:28px 28px 4px;border-left:1px solid var(--rule)}
+.how div:first-child{padding-right:0}
+.how div:last-child{border-left:0}
+.how .big{font-family:var(--serif);font-size:64px;line-height:1;color:var(--red);font-weight:700}
+.how p{margin-top:14px;color:var(--ink-2);font-size:17px}
+
+/* about */
+.about{display:grid;grid-template-columns:370px 1fr;gap:64px;align-items:center}
+.about img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%}
+.about p.label{font-size:14px;color:var(--gold);margin:0 0 14px}
+.about p:not(.label){font-size:20px;color:var(--ink-2);margin-top:16px;max-width:620px}
+.about .sig{font-family:var(--serif);font-size:24px;color:var(--ink);margin-top:20px}
+
+/* price */
+.offer{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--ink);background:var(--paper)}
+.offer > div{padding:52px 48px}
+.offer .left{border-left:1px solid var(--ink)}
+.offer .old{color:#5E4C48;font-size:20px;font-weight:600}
+.offer .old s{text-decoration:none;position:relative;white-space:nowrap}
+.offer .old s:after{content:"";position:absolute;left:-3px;right:-3px;top:54%;height:1.5px;background:var(--red);transform:rotate(-4deg)}
+.offer .now{font-family:var(--serif);font-size:84px;line-height:1;color:var(--ink);margin-top:22px;font-weight:700}
+.offer .now small{font-size:34px;font-weight:600;margin-right:4px}
+.offer .now .pre{display:block;font-size:22px;font-weight:600;color:var(--ink-2);margin-bottom:6px}
+.offer .total{font-size:16px;color:var(--muted);margin-top:8px}
+.offer .when{color:var(--ink-2);margin-top:8px}
+.offer ul{list-style:none;margin-top:4px}
+.offer li{padding:14px 0;border-bottom:1px solid var(--rule);color:var(--ink-2)}
+.offer li:last-child{border:0}
+.offer .actions{margin-top:30px;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.offer .wa{font-size:16px;font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px}
+.offer .note{font-size:14px;color:var(--muted)}
+
+footer{padding:44px 0 120px;border-top:1px solid var(--rule)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;color:var(--muted);font-size:14px}
+footer img{height:28px;width:auto}
+
+.sticky{display:none}
+@media (max-width:860px){
+  body{font-size:17px}
+  .wrap{padding:0 22px}
+  .masthead .wrap{height:64px}
+  .masthead img{height:26px}
+  .hero .wrap{grid-template-columns:1fr;gap:40px;padding-top:48px;padding-bottom:56px}
+  .portrait{max-width:280px}
+  .facts{flex-direction:column;gap:6px}
+  .facts span{border:0;margin:0;padding:0}
+  .facts span:before{content:"";display:inline-block;width:14px;height:1px;background:var(--gold-l);vertical-align:middle;margin-left:10px}
+  .portrait .frame:after{inset:10px -10px -10px 10px}
+  .sec{padding:72px 0}
+  .pull{padding:60px 0}
+  .split,.duo,.about{grid-template-columns:1fr;gap:36px}
+  .steps li{grid-template-columns:64px 1fr;gap:6px 18px;padding:24px 0}
+  .steps .n{font-size:40px;grid-row:span 2}
+  .steps h3{font-size:24px}
+  .outcome{grid-template-columns:1fr;gap:6px;padding:32px 26px}
+  .outcome h3{font-size:27px}
+  .how{grid-template-columns:1fr 1fr}
+  .how div{padding:24px 0 24px 18px;border-bottom:1px solid var(--rule)}
+  .how div:nth-child(2n){border-left:0}
+  .how div:nth-child(2n+1){padding-right:0}
+  .how div:nth-child(2n){padding-right:18px;padding-left:0}
+  .how .big{font-size:48px}
+  .about img{width:220px}
+  .offer{grid-template-columns:1fr}
+  .offer > div{padding:36px 26px}
+  .offer .left{border-left:0;border-top:1px solid var(--ink)}
+  .offer .now{font-size:68px}
+  footer .wrap{flex-direction:column;text-align:center}
+  .sticky{display:block;transform:translateY(110%);transition:transform .25s;position:fixed;bottom:0;left:0;right:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,253,249,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--rule);z-index:10}
+  .sticky.on{transform:none}
+  .sticky .btn{display:block;text-align:center}
+  .scd{margin:6px 0 0;text-align:center;font-size:12px;line-height:1.3;color:#6b5a4a}
+  .scd bdi{direction:ltr;unicode-bidi:isolate;font-variant-numeric:tabular-nums;font-feature-settings:"tnum";color:var(--red);font-weight:600}
+}
+.cd{margin:20px 0 8px;padding:20px 24px 18px;border-radius:14px;background:var(--red);color:#F6EADB;max-width:380px;text-align:center;box-shadow:0 10px 28px rgba(90,5,7,.22);position:relative}
+.cd:before{content:"";position:absolute;inset:5px;border:1px solid rgba(221,184,105,.45);border-radius:10px;pointer-events:none}
+.cd-t{font-size:15px;font-weight:600;color:#F6EADB;margin:0 0 2px;line-height:1.4}
+.cd-date{display:block;font-family:var(--serif);font-size:24px;font-weight:700;color:var(--gold-l);line-height:1.3;margin:0 0 12px;letter-spacing:.5px}
+.cd-n{display:flex;justify-content:center;align-items:flex-start;gap:6px;direction:rtl}
+.cd-n span{flex:1 1 0;min-width:0;max-width:66px;display:flex;flex-direction:column;align-items:center;font-size:12px;color:rgba(246,234,219,.85);line-height:1.3}
+.cd-n b{display:block;width:100%;padding:8px 0 6px;margin-bottom:6px;background:#FFFBF4;border-radius:8px;border-bottom:3px solid var(--gold);font-size:28px;font-weight:700;color:var(--red);line-height:1.1;font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+.cd-n i{font-style:normal;flex:0 0 auto;font-size:22px;font-weight:700;color:var(--gold-l);line-height:46px}
+.cd.ended .cd-n,.cd.ended .cd-date{display:none}
+.cd.ended .cd-t{margin:0}
+.hcd{margin:16px 0 0;font-size:14px;color:rgba(246,234,219,.78);display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.hcd b{font-weight:600;color:var(--gold-l);font-variant-numeric:tabular-nums;font-feature-settings:"tnum";letter-spacing:.3px}
+.hcd b bdi{direction:ltr;unicode-bidi:isolate}
+.hcd.ended b{display:none}
+@media (max-width:400px){.cd{max-width:none;padding:18px 20px 16px}.cd-n b{font-size:24px}}
+.sec.gets-sec{background:var(--red);color:#F6EADB}
+.gets-sec .label{color:var(--gold-l)}
+.gets-sec h2{color:#FFF7EC}.gets-sec h2 em{color:var(--gold-l)}
+.gets{list-style:none;margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(221,184,105,.45)}
+.gets li{padding:30px 0 34px 28px;border-bottom:1px solid rgba(221,184,105,.45)}
+.gets li:not(:nth-child(3n+1)){padding-right:28px;border-right:1px solid rgba(221,184,105,.45)}
+.gets .k{display:block;font-size:14px;font-weight:600;color:var(--gold-l);letter-spacing:.04em;margin-bottom:12px}
+.gets h3{font-size:24px;color:#FFF7EC;line-height:1.3;margin-bottom:8px}
+.gets p{color:#E6D3BF;font-size:17px;line-height:1.6}
+@media(max-width:760px){.gets{grid-template-columns:1fr;margin-top:36px}.gets li,.gets li:not(:nth-child(3n+1)){padding:20px 0;border-right:0;display:grid;grid-template-columns:40px 1fr;column-gap:12px}.gets .k{grid-row:span 2;margin:4px 0 0;font-size:15px}.gets h3{font-size:21px;margin-bottom:2px}.gets p{font-size:16px}}
+.plan{margin:56px auto 0;max-width:600px;text-align:center}
+.plan img{width:100%;display:block;border-radius:6px;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.plan figcaption{margin-top:18px;font-size:17px;color:#E6D3BF;line-height:1.6}
+
+.tracks{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-top:56px;border:1px solid var(--ink);background:var(--paper)}
+.track{padding:40px 32px;display:flex;flex-direction:column;border-left:1px solid var(--ink)}
+.track:last-child{border-left:0}
+.track.feat{background:var(--red);color:#F6EADB}
+.track .tag{font-size:14px;font-weight:700;color:var(--gold)}
+.track.feat .tag{color:var(--gold-l)}
+.track h3{font-size:28px;margin-top:8px;line-height:1.2}
+.track.feat h3{color:#FFF7EC}
+.track .dur{color:var(--ink-2);margin-top:6px;font-size:16px}
+.track.feat .dur{color:#EBD9C6}
+.track .price{font-size:44px;font-weight:700;line-height:1;margin-top:26px}
+.track .price small{font-size:22px;font-weight:600;margin-right:3px}
+.track .old{font-size:16px;color:var(--muted);margin-top:8px}
+.track.feat .old{color:#E0C9B3}
+.track .old s{text-decoration-color:var(--red)}
+.track.feat .old s{text-decoration-color:var(--gold-l)}
+.track .pay{font-size:15px;color:var(--muted);margin-top:6px}
+.track.feat .pay{color:#E0C9B3}
+.track ul{list-style:none;margin:24px 0 28px;flex:1}
+.track li{padding:10px 0;border-bottom:1px solid var(--rule);font-size:16px;color:var(--ink-2)}
+.track.feat li{border-color:rgba(221,184,105,.35);color:#EBD9C6}
+.track li:last-child{border:0}
+.track .btn{text-align:center}
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;list-style:none;margin-top:48px;border-top:1px solid var(--ink)}
+.svc li{padding:20px 0;border-bottom:1px solid var(--rule);font-size:19px;display:flex;gap:14px;align-items:baseline}
+.svc li:before{content:"";flex:0 0 8px;height:8px;background:var(--gold);transform:rotate(45deg) translateY(-2px)}
+.svc li b{color:var(--red)}
+.extras{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px}
+.extras div{border-top:2px solid var(--gold);padding-top:18px}
+.extras h3{font-size:22px}
+.extras p{color:var(--ink-2);font-size:17px;margin-top:4px}
+.extras .p{font-weight:700;color:var(--ink);font-size:20px;margin-top:8px}
+.cta-final{text-align:center}
+.cta-final h2{margin:0 auto}
+.cta-final .intro{margin:20px auto 0}
+.cta-final .btn{margin-top:34px}
+@media (max-width:860px){
+ .tracks{grid-template-columns:1fr}
+ .track{border-left:0;border-bottom:1px solid var(--ink);padding:32px 24px}
+ .track:last-child{border-bottom:0}
+ .svc{grid-template-columns:1fr}
+ .extras{grid-template-columns:1fr}
+ .hero h1{white-space:normal}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <img src="../assets/logo.png" alt="Alkalay Consulting">
+    <a class="link" href="#tracks">המסלולים</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker">ליווי עסקי אישי</div>
+      <h1>מנוע צמיחה יציב</h1>
+      <p class="sub">חברה מוצלחת היא חברה עם מנוע צמיחה יציב, שלא מפחדת מכיסי אוויר.</p>
+      <p class="lead">אני לא נותן הוראות איך לבנות את החברה שלך. אני מלווה אותך לאורך כל הדרך עד שמגיעים לתוצאות, ומלמד אותך לעשות את זה לבד, כדי שהחברה שלך לא תהיה תלויה באף אדם.</p>
+      <div class="facts"><span>ליווי אחד על אחד</span><span>2 מפגשים בשבוע</span><span>עד הגעה לתוצאות</span></div>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="#tracks">לראות את המסלולים</a>
+      </div>
+    </div>
+    <figure class="portrait">
+      <div class="frame"><img src="../assets/ari.jpg" alt="ארי אלקלעי"></div>
+      <figcaption><b>ארי אלקלעי</b>Alkalay Consulting</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split">
+    <div>
+      <p class="label">הגישה</p>
+      <h2>לא הוראות. <em>ליווי עד התוצאה.</em></h2>
+    </div>
+    <ul class="who-list">
+      <li><h3>הולכים יחד עד הסוף</h3><p>לא מסמך המלצות שנשאר במגירה. אני איתך בכל שלב, עד שהעסק מגיע לתוצאות.</p></li>
+      <li><h3>לומדים לעשות את זה לבד</h3><p>המטרה היא שהחברה לא תהיה תלויה באף אדם, גם לא בי.</p></li>
+      <li><h3>תשתית שמתאימה לך</h3><p>בונים את העסק סביב מי שאתה ומה שאתה רוצה ליצור, לא לפי תבנית.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec cream">
+  <div class="wrap">
+    <p class="label">על מה עובדים</p>
+    <h2>כל המערכת של <em>העסק</em></h2>
+    <ul class="svc">
+      <li>בניית תשתית עסקית שמתאימה לך</li>
+      <li>אסטרטגיית צמיחה מדויקת</li>
+      <li>בניית מודל פיננסי</li>
+      <li>אסטרטגיית תמחור</li>
+      <li>פנייה לקהל היעד הנכון</li>
+      <li>ניהול פיננסי עסקי</li>
+      <li>חדירה לשוק רלוונטי</li>
+      <li><span>ניהול בזמן אמת, <b>LIVE</b></span></li>
+      <li>מסרים מיתוגיים</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="tracks">
+  <div class="wrap">
+    <p class="label">המסלולים</p>
+    <h2>שלוש דרכים <em>לעבוד יחד</em></h2>
+    <p class="intro">מהתחלה מהירה ועד ליווי מלא עם ניהול בזמן אמת.</p>
+    <div class="tracks">
+      <div class="track">
+        <span class="tag">מסלול קצר</span>
+        <h3>לחבר את הפאזל</h3>
+        <p class="dur">3 שבועות, קבוצה קטנה</p>
+        <p class="price">3,690 <small>₪</small></p>
+        <p class="pay">3 תשלומים של 1,230 ₪ · ההרשמה עד 30.11</p>
+        <ul>
+          <li>מפגש חי בזום כל שבוע</li>
+          <li>שיחה אישית אחד על אחד</li>
+          <li>לקוח, מוצר, תמחור, תוכנית פיננסית ושיווק</li>
+          <li>תוכנית ל-90 הימים הבאים</li>
+        </ul>
+        <a class="btn btn-red" href="https://arihalkalay-star.github.io/puzzle/">לפרטים על המסלול</a>
+      </div>
+      <div class="track">
+        <span class="tag">ליווי אישי</span>
+        <h3>ליווי 4 חודשים</h3>
+        <p class="dur">4 חודשים, 2 מפגשים בשבוע</p>
+        <p class="price">30,000 <small>₪</small></p>
+        <p class="pay">או 2,500 ₪ לחודש</p>
+        <ul>
+          <li>ליווי אחד על אחד</li>
+          <li>תשתית עסקית ומודל פיננסי</li>
+          <li>תמחור, קהל יעד וחדירה לשוק</li>
+          <li>מסרים מיתוגיים ואסטרטגיית צמיחה</li>
+        </ul>
+        <a class="btn btn-red" href="https://wa.me/972523313827?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A8%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93%20%D7%A2%D7%9C%20%D7%94%D7%9C%D7%99%D7%95%D7%95%D7%99%20%D7%94%D7%90%D7%99%D7%A9%D7%99%20%D7%A9%D7%9C%204%20%D7%97%D7%95%D7%93%D7%A9%D7%99%D7%9D" target="_blank" rel="noopener">לשיחת התאמה</a>
+      </div>
+      <div class="track feat">
+        <span class="tag">ליווי מלא</span>
+        <h3>ליווי + ניהול בזמן אמת</h3>
+        <p class="dur">4 חודשי ליווי, 2 מפגשים בשבוע, ועוד 4 חודשי ניהול בזמן אמת</p>
+        <p class="price">45,000 <small>₪</small></p>
+        <p class="old">במקום <s>75,000 ₪</s></p>
+        <p class="pay">או 3,750 ₪ לחודש</p>
+        <ul>
+          <li>כל מה שבליווי האישי</li>
+          <li>4 חודשים נוספים של ניהול בזמן אמת, LIVE</li>
+          <li>ניהול פיננסי עסקי לצד העבודה השוטפת</li>
+          <li>עד שהעסק יודע להחזיק את עצמו</li>
+        </ul>
+        <a class="btn btn-light" href="https://wa.me/972523313827?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A8%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93%20%D7%A2%D7%9C%20%D7%94%D7%9C%D7%99%D7%95%D7%95%D7%99%20%D7%94%D7%9E%D7%9C%D7%90%20%D7%A2%D7%9D%20%D7%A0%D7%99%D7%94%D7%95%D7%9C%20%D7%91%D7%96%D7%9E%D7%9F%20%D7%90%D7%9E%D7%AA" target="_blank" rel="noopener">לשיחת התאמה</a>
+      </div>
+    </div>
+    <div class="extras">
+      <div><h3>פגישה בודדת</h3><p>להכיר את דרך העבודה לפני שמתחייבים.</p><p class="p">1,400 ₪</p></div>
+      <div><h3>דפי מכירה</h3><p>שירות נפרד, לכל אחד מהמסלולים.</p><p class="p">1,500 ₪ לדף</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pull">
+  <div class="wrap">
+    <blockquote>חיפשתי תדר כזה כבר כמה זמן, וזה בדיוק מה שאני צריכה. החיבור לעסק והחיבור לזוהר.</blockquote>
+    <p class="attr">משתתפת בקבוצת סודות הזוהר לעסקים</p>
+  </div>
+</section>
+
+<section class="sec cream">
+  <div class="wrap about">
+    <img src="../assets/ari-about.jpg" alt="ארי אלקלעי">
+    <div>
+      <p class="label">מי אני</p>
+      <h2>נעים מאוד, ארי</h2>
+      <p>אני ארי אלקלעי. כבר תשע שנים אני מלווה בעלי עסקים ומייסדים, ובדרך ליוויתי יותר מ-164 עסקים, חברות וארגונים.</p>
+      <p>אני עוזר לחבר בין מה שאתם רוצים ליצור לבין מערכת עסקית שיכולה לשאת אותו לאורך זמן: מודל עסקי, תמחור, שיווק, מכירה וניהול פיננסי. אני לא עוצר בכיוון. אני ממשיך איתכם עד שהוא הופך להחלטות, להרגלים ולתוצאות.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="label">מה אומרים</p>
+    <h2>מילים של <em>משתתפים</em></h2>
+    <div class="duo">
+      <div><blockquote>זה הוריד לי עוד אסימון שנתן לי כל כך מוטיבציה, וגם יצר עשייה והנאה מהדרך.</blockquote><p class="attr">משתתפת בקבוצת סודות הזוהר לעסקים</p></div>
+      <div><blockquote>אתה אלוף על מלא! בזכותך נפתחתי לעולם מטורף.</blockquote><p class="attr">משתתפת בקבוצת סודות הזוהר לעסקים</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec cream cta-final">
+  <div class="wrap">
+    <p class="label">הצעד הבא</p>
+    <h2>בואו נבדוק <em>מה מתאים לכם</em></h2>
+    <p class="intro">שיחה קצרה, ונבחר יחד את המסלול שמתאים לשלב שבו העסק נמצא.</p>
+    <a class="btn btn-red" href="https://wa.me/972523313827?text=%D7%94%D7%99%D7%99%20%D7%90%D7%A8%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%93%D7%91%D7%A8" target="_blank" rel="noopener">כתבו לי בוואטסאפ</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="../assets/logo.png" alt="Alkalay Consulting">
+    <span>ארי אלקלעי | פיתוח עסקי עם נשמה</span>
+  </div>
+</footer>
+</body>
+</html>
